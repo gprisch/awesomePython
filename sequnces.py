@@ -43,7 +43,6 @@ assert a_tuple < (6,)
 student_tuple = ('Amanda', 'Blue', [98, 75, 87])
 student_tuple[2][0] = 90
 assert student_tuple == ('Amanda', 'Blue', [90, 75, 87])
-
 # unpack other sequences
 x, y = 'hi'
 assert x == 'h' and y == 'i'
@@ -53,4 +52,52 @@ x, y = {2, 4}
 assert x == 2 and y == 4
 x, y = [{1, 2}, [1, 3]]
 assert x == {1, 2} and y == [1, 3]
+# enumerate function
+words = ['Amanda', 'Blue', 'hello', 'world']
+for index, word in enumerate(words):
+    print(f'{index}: {word:>7}')
+# 2 examples
+colors = ['red', 'orange', 'yellow']
+assert list(enumerate(colors)) == [(0, 'red'), (1, 'orange'), (2, 'yellow')]
+assert tuple(enumerate(colors)) == ((0, 'red'), (1, 'orange'), (2, 'yellow'))
+assert set(enumerate(colors)) == {(0, 'red'), (1, 'orange'), (2, 'yellow')}
+# bar chart example
+numbers = [19, 3, 15, 7, 11]
+print('\nCreating a bar chart from numbers:')
+print(f'index{"value":>8}   bar')
+for i, v in enumerate(numbers):
+    print(f'{i:>5}{v:>8}   {"|" * int(v)}')
+# slicing sequences
+numbers = [2, 3, 5, 7, 11, 13, 17, 19]
+assert numbers[2:4] == [5, 7]
+assert numbers[6:] == [17, 19]
+assert numbers[:6] == [2, 3, 5, 7, 11, 13]
+# with steps
+assert numbers[::2] == [2, 5, 11, 17]
+# assert numbers[::-1] == numbers.reverse()
+# print(numbers.reverse())
+# negative indices
+assert numbers[-3:-5:-1] == [13, 11]
+# delete the numbers
+del numbers[2:]
+assert numbers == [2, 3]
+del numbers
+# -> deleted from session
+numbers = [3, 7, 1, 4, 2, 8, 5, 6]
+assert numbers.index(7) == 1
+# are all or any in the list is true
+assert all([0, 12]) is False
+assert all([3, 12]) is not False
+# joke
+it = 1
+assert it is not False
+# more
+l = []
+l.extend('abc')
+assert l == ['a', 'b', 'c']
+assert l.count('a') == 1
+# copy
+cp = l.copy()
+assert id(cp) != id(l)
 
+# List Comprehensions
