@@ -19,5 +19,21 @@ assert tuple(squares_of_odds) == (9, 49, 1, 81, 25)
 numbers = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
 filtered = list(filter(lambda x: x % 2 != 0, numbers))
 assert filtered == [3, 7, 1, 9, 5]
+# map
+mapped = list(map(lambda n: n % 2, numbers))
+same = [item % 2 for item in numbers]
+assert mapped == same == [0, 1, 1, 1, 1, 0, 0, 0, 1, 0]
+# print(vowel for vowel in 'aeiou')
+colors = ['Red', 'orange', 'Yellow', 'green', 'Blue']
+assert ('Red' < 'orange') is True
+# because
+assert ord('R') == 82
+assert ord('o') == 111
+min_color = min(colors, key=lambda color: color.lower())
+assert min_color == 'Blue'
+# alphabetic order of colors
+assert sorted(colors, key=lambda c: c.lower()) == ['Blue', 'green', 'orange', 'Red', 'Yellow']
+
+vowels = 'aeiou'
 
 
