@@ -24,3 +24,4 @@ assert b_part_rev == 'eman ym '
 assert ord('A') == 65
 assert chr(65) == 'A'
 
+print(a_string.center(len(a_string) + 6, '-'))

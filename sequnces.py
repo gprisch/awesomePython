@@ -100,4 +100,16 @@ assert l.count('a') == 1
 cp = l.copy()
 assert id(cp) != id(l)
 
+# A, B, C list
+for i, el in enumerate(['one', 'two', 'three'], start=65):
+    a_b_c_list = f'{chr(i)}. {el}' # A. one ---- B. two etc
+    # print(a_b_c_list)
 
+l[0:0] = [1, 2]
+assert l == [1, 2, 'a', 'b', 'c']
+
+# useful
+assert l * 2 == [1, 2, 'a', 'b', 'c', 1, 2, 'a', 'b', 'c']
+assert (None in l) is False
+l.append([])
+assert ([] in l) is True
