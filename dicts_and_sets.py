@@ -38,4 +38,8 @@ country_capitals3 = {'Haiti': 'Port-au-Prince', 'Belgium': 'Brussels'}
 assert country_capitals1 is not country_capitals2
 assert country_capitals2 != country_capitals1
 
-
+print('\n')
+# with a bit of comprehension
+grades = {'Sue': [98, 87, 94], 'Bob': [84, 95, 91]}
+grades_dict = {k: sum(v) / len(v) for k, v in grades.items()}
+print(grades_dict)
