@@ -85,7 +85,7 @@ del numbers
 # -> deleted from session
 numbers = [3, 7, 1, 4, 2, 8, 5, 6]
 assert numbers.index(7) == 1
-# are all or any in the list is true
+# are all_nums or any in the list is true
 assert all([0, 12]) is False
 assert all([3, 12]) is not False
 # joke

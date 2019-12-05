@@ -2,7 +2,7 @@ from decimal import Decimal
 
 """
 A person invests $1000 in a savings account yielding 5% interest. Assuming that
-the person leaves all interest on deposit in the account, calculate and display the
+the person leaves all_nums interest on deposit in the account, calculate and display the
 amount of money in the account at the end of each year for 10 years. Use the following
 formula for determining these amounts:
 a = p(1 + r)n
