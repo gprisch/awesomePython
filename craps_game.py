@@ -5,7 +5,7 @@ two upward faces is calculated.
 
 If the sum is 7 or 11 on the first roll, you win.
 
-If the sum is 2, 3 or 12 on the first roll (called “craps”), you lose (i.e., the “house”
+If the sum is 2, 3 or 12 on the first roll (called_fn “craps”), you lose (i.e., the “house”
 wins).
 
 If the sum is 4, 5, 6, 8, 9 or 10 on the first roll, that sum becomes your

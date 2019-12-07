@@ -1,3 +1,5 @@
+from enum import Enum
+
 # multiple line statements
 # this:
 long_str = 'this string of characters is really long and i need to split it because it is way better'
@@ -134,5 +136,23 @@ if 0 < a <= c > b > 1:
     print('All these comparisons are true!')
     print('c is equal or greater than all the rest!')
 
-# simulate the switch
+
+# simulate the switch (no if elif elif else)
+class Action(Enum):
+    HELLO = 'hello'
+    BYE = 'bye'
+
+
+menu = {
+    Action.HELLO: lambda x: print(f'Hello {x}'),
+    Action.BYE: lambda x: print(f'Goodbye {x}')
+}
+
+# one line for short statements and simulate if else
+user_name = input().strip() or 'X'
+for k in menu.keys(): menu[k](user_name)
+
+# and use _ for large numbers
+my_salary = False and 400_000_000_000
+assert my_salary is False  # unfortunately
 
