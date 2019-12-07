@@ -139,6 +139,12 @@ if 0 < a <= c > b > 1:
 
 # simulate the switch (no if elif elif else)
 class Action(Enum):
+    """ Documentation is important
+
+        If you write obscure code
+        help(Action) for console
+        python -m pydoc best_practices
+    """
     HELLO = 'hello'
     BYE = 'bye'
 
@@ -155,4 +161,3 @@ for k in menu.keys(): menu[k](user_name)
 # and use _ for large numbers
 my_salary = False and 400_000_000_000
 assert my_salary is False  # unfortunately
-
