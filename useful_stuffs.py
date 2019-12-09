@@ -17,9 +17,12 @@ for i in range(3):
 test_this = True
 password_required = False
 if test_this:
-    username, password = input('enter your user name: ').strip() or 'anonymous', \
-                         input('enter your password: ').strip() if password_required else None
+    username, password = input('enter your user name: ').strip() \
+                         or 'anonymous', \
+                         input('enter your password: ').strip() \
+                         if password_required else None
     print(username,
-          ''.join(['*' for c in list(password)]) * random.randrange(2,5)  # lol
+          ''.join(['*' for c in list(password)])
+          * random.randrange(2, 5)  # lol
           if password is not None else '',
           sep='\n')
