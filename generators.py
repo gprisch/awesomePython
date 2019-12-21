@@ -35,4 +35,22 @@ gen = make_fibo_gen(50)
 # 3
 # Out[43]: True
 
+a_gen = (i for i in range(1, 5))
+
+for stuff in a_gen:
+    print(stuff, end='  ')
+
+
+# yield from
+def my_sub_gen(x):
+    for i in range(x):
+        yield i
+
+
+def my_gen(x):
+    yield from my_sub_gen(x)
+
+
+for j in my_gen(8):
+    print(j, end='  ')
 
