@@ -1,4 +1,4 @@
-# emtree
+# entree
 # a = 2
 # b = 3
 
