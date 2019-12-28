@@ -39,10 +39,10 @@ pattern = r'\b.+s\si*'
 test_exp(pattern)
 # test presence of one digit
 
-res1 = re.match(r'\w*\d', 'aaaaajdld9hhhh')
-assert res1 is not None
+res = re.match(r'\w*\d', 'aaaaajdld9hhhh')
+assert res is not None
 
-res2 = re.match(r'g(r+)(ego)(r.*)', 'grrrrrrrrrrregoryyyyy')
-for i in range(res2.lastindex + 1):
-    print(f'{i}:{res2.group(i)}', sep=' ')
+res = re.match(r'g(r{4,})(ego)(r.*)', 'grrrrrrrrrrregoryyyyy')
+for i in range(res.lastindex + 1):
+    print(f'{i}:{res.group(i)}', sep=' ')
 
