@@ -1,4 +1,4 @@
-# string.format()
+    # string.format()
 a_str = "|{1!r:10} loves {0!r:10}|"
 formatted_1 = a_str.format('Greg', 'Jean')
 print(formatted_1)
@@ -32,5 +32,12 @@ print('{:-018,}'.format(large2))
 # not trailing 0 in the
 # next but a group of 0
 print('{:0>10}'.format(-16))
+
+# special cases
+length = 10
+precision = 4
+a_format = '{0:{1},.{2}f}'
+print(a_format.format(1670.45678, length, precision))  # 1,670.457
+
 
 
