@@ -24,7 +24,7 @@ class Cat(Mammal, Pet):
         self.breed = breed
 
     def __str__(self):
-        return ('%s aka. %s is a %s and is %.2fcm long' % (self.name,
+        return ('%s aka. %s is a %s and is %.2fm long' % (self.name,
                                                            self.nickname,
                                                            self.breed,
                                                            self.size
