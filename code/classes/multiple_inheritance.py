@@ -23,17 +23,17 @@ class Cat(Mammal, Pet):
         Pet.__init__(self, nick)
         self.breed = breed
 
+    def __str__(self):
+        return ('%s aka. %s is a %s and is %.2f long' % (self.name,
+                                                         self.nickname,
+                                                         self.breed,
+                                                         self.size))
+
     def speak(self):
         print('Miaouuu')
-
-    def to_string(self):
-        print('%s aka. %s is a %s and is %.2f long' % (self.name,
-                                                       self.nickname,
-                                                       self.breed,
-                                                       self.size))
 
 
 if __name__ == '__main__':
     my_cat = Cat('Goliath', .4, 'Gogo', 'Maine coon')
     my_cat.speak()
-    my_cat.to_string()
+    print(my_cat)
