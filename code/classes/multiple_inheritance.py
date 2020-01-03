@@ -5,7 +5,7 @@ class Mammal:
         self.size = size
 
     def speak(self):
-        print('my name is ', self.name)
+        print('my name is', self.name)
 
     def call_out(self):
         """ polymorphism """
@@ -24,12 +24,21 @@ class Cat(Mammal, Pet):
         self.breed = breed
 
     def __str__(self):
-        return ('%s aka. %s is a %s and is %.2f long' % (self.name,
-                                                         self.nickname,
-                                                         self.breed,
-                                                         self.size))
+        return ('%s aka. %s is a %s and is %.2fcm long' % (self.name,
+                                                           self.nickname,
+                                                           self.breed,
+                                                           self.size
+                                                           ))
+
+    def __repr__(self):
+        return ("Cat('%s',%.2f,'%s','%s')" % (self.name,
+                                              self.size,
+                                              self.nickname,
+                                              self.breed
+                                              ))
 
     def speak(self):
+        Mammal.speak(self)  # my cat can speak
         print('Miaouuu')
 
 
