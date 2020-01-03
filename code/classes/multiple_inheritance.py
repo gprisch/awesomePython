@@ -25,17 +25,21 @@ class Cat(Mammal, Pet):
 
     def __str__(self):
         return ('%s aka. %s is a %s and is %.2fm long' % (self.name,
-                                                           self.nickname,
-                                                           self.breed,
-                                                           self.size
-                                                           ))
+                                                          self.nickname,
+                                                          self.breed,
+                                                          self.size
+                                                          ))
 
+    # Defining __repr__ also gets us __str__.
     def __repr__(self):
         return ("Cat('%s',%.2f,'%s','%s')" % (self.name,
                                               self.size,
                                               self.nickname,
                                               self.breed
                                               ))
+
+    def __bool__(self):
+        return self.name and self.size and self.nickname and self.breed
 
     def speak(self):
         Mammal.speak(self)  # my cat can speak
